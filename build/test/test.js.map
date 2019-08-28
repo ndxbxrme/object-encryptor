@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "test.js",
+  "sourceRoot": "../../src/test/",
+  "sources": [
+    "test.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;EAAA;AAAA,MAAA,aAAA,EAAA,SAAA,EAAA,IAAA,EAAA;;EACA,SAAA,GAAY,OAAA,CAAQ,aAAR;;EAEZ,OAAA,GACE;IAAA,IAAA,EAAM,CAAC,QAAD,EAAW,OAAX,CAAN;IACA,MAAA,EAAQ,CADR;IAEA,EAAA,EAAI,IAFJ;IAGA,KAAA,EAAO,IAAI,IAAJ,CAAA,CAHP;IAIA,MAAA,EAAQ,KAJR;IAKA,KAAA,EAAO,KALP;IAMA,KAAA,EACE;MAAA,QAAA,EACE;QAAA,WAAA,EAAa;MAAb,CADF;MAEA,SAAA,EAAW;IAFX;EAPF;;EAUF,aAAA,GAAgB,CAAC,MAAD,EAAS,QAAT,EAAmB,OAAnB,EAA4B,IAA5B;;EAChB,IAAA,GAAO,MAAA,QAAA,CAAA,CAAA;AACL,QAAA,SAAA,EAAA;IAAA,SAAS,CAAC,WAAV,CAAsB,KAAtB;IACA,SAAA,GAAY,CAAA,MAAM,SAAS,CAAC,OAAV,CAAkB,OAAlB,EAA2B,aAA3B,CAAN;IACZ,OAAO,CAAC,GAAR,CAAY,SAAZ;IACA,SAAA,GAAY,CAAA,MAAM,SAAS,CAAC,OAAV,CAAkB,SAAlB,EAA6B,aAA7B,CAAN;WACZ,OAAO,CAAC,GAAR,CAAY,SAAZ;EALK;;EAMP,IAAA,CAAA;AArBA",
+  "sourcesContent": [
+    "'use strict'\r\nencryptor = require '../index.js'\r\n  \r\ntestObj =\r\n  pets: ['maggie', 'buddy']\r\n  noPets: 2\r\n  pi: 3.14\r\n  adate: new Date()\r\n  maggie: 'cat'\r\n  buddy: 'dog'\r\n  thing:\r\n    subthing:\r\n      subsubthing: 'ham'\r\n    asubthing: 'boom'\r\nencryptFields = ['pets', 'noPets', 'adate', 'pi']\r\nmain = ->\r\n  encryptor.setPassword 'bam'\r\n  encrypted = await encryptor.encrypt testObj, encryptFields\r\n  console.log encrypted\r\n  decrypted = await encryptor.decrypt encrypted, encryptFields\r\n  console.log decrypted\r\nmain()"
+  ]
+}
